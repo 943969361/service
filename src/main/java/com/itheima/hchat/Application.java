@@ -18,7 +18,6 @@ import org.springframework.context.annotation.Bean;
     public IdWorker idWorker(){
         return  new IdWorker(0,0);
     }
-
 }
 
 

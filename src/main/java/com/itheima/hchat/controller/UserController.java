@@ -1,5 +1,7 @@
 package com.itheima.hchat.controller;
 
+import cn.hutool.core.img.ImgUtil;
+import cn.hutool.core.io.FileUtil;
 import com.itheima.hchat.pojo.TbUser;
 import com.itheima.hchat.pojo.vo.Result;
 import com.itheima.hchat.pojo.vo.User;
@@ -7,7 +9,9 @@ import com.itheima.hchat.sercvice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -58,4 +62,25 @@ public class UserController {
             return new Result(false, e.getMessage());
         }
     }
+
+    /**
+     * 文件上传
+     */
+    @RequestMapping("/upload")
+    public Result upload(MultipartFile file ,String userid){
+
+        try {
+            User user = userService.upload(file,userid);
+            if(user == null){
+                return new Result(false,"上传失败");
+            }else {
+                System.out.println(user);
+                return new Result(true,"上传成功");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return  new Result(false,"上传错误");
+        }
+    }
+
 }

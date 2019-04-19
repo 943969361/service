@@ -2,6 +2,7 @@ package com.itheima.hchat.sercvice;
 
 import com.itheima.hchat.pojo.TbUser;
 import com.itheima.hchat.pojo.vo.User;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -22,4 +23,12 @@ public interface UserService {
      * @param tbUser
      */
     void register(TbUser tbUser);
+
+    /**
+     * 用户上传头像
+     * @param file
+     * @param userid
+     * @return
+     */
+    User upload(MultipartFile file, String userid);
 }
