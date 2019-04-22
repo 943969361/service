@@ -65,6 +65,7 @@ public class UserServiceImpl implements UserService {
             for (TbUser tbUser : tbUsers) {
                 if (StringUtils.equals(tbUser.getPassword(), digestPassword)) {
                     User user = new User();
+                    //noinspection AlibabaAvoidApacheBeanUtilsCopy
                     BeanUtils.copyProperties(user,tbUser);
                     return user;
                 }
@@ -121,13 +122,13 @@ public class UserServiceImpl implements UserService {
             tbUser.setPicNormal(property + url);
             tbUser.setPicSmall(property + picSmallUrl);
             //保存本地修改小图失败
-//            // 保存 G:\Photo\big
+            // 保存 G:\Photo\big
 //            approvalFile(file);
 //            // 截取filename最后/文件名
 //            String newFileName =  fileName.substring(fileName.lastIndexOf("/")+1);
 //            ImgUtil.scale(
 //                    FileUtil.file("F:\\netty_chat\\service\\src\\main\\webapp\\img\\big\\" + newFileName +"."+ ext),
-//                    FileUtil.file("F:\\netty_chat\\service\\src\\main\\webapp\\img\\big\\" + newFileName+"s."+ ext),
+//                    FileUtil.file("F:\\netty_chat\\service\\src\\main\\webapp\\img\\small\\" + newFileName+"."+ ext),
 //                    0.1f
 //                    //缩放比例
 //            );
@@ -183,5 +184,30 @@ public class UserServiceImpl implements UserService {
             }
         }
     }
+
+    /**
+     * 修改昵称
+     * @param id
+     * @param nickname
+     */
+    @Override
+    public void updateNickname(String id, String nickname) {
+
+        if(StringUtils.isEmpty(id) || StringUtils.isEmpty(nickname)){
+            throw new RuntimeException("昵称或id为空");
+        }
+        TbUser tbUser = tbUserMapper.selectByPrimaryKey(id);
+        tbUser.setNickname(nickname);
+        tbUserMapper.updateByPrimaryKey(tbUser);
+    }
+
+    @Override
+    public User findById(String userid) throws InvocationTargetException, IllegalAccessException {
+        TbUser tbUser = tbUserMapper.selectByPrimaryKey(userid);
+        User user = new User();
+        BeanUtils.copyProperties(user,tbUser);
+        return user;
+    }
+
 
 }

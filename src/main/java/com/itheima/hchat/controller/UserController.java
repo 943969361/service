@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 @RestController
@@ -81,6 +82,25 @@ public class UserController {
             e.printStackTrace();
             return  new Result(false,"上传错误");
         }
+    }
+
+    @RequestMapping("/updateNickname")
+    public Result updateNickname(@RequestBody User user){
+
+        try {
+            userService.updateNickname(user.getId(),user.getNickname());
+        }catch (RuntimeException e){
+            return new Result(false,e.getMessage());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @RequestMapping("/findById")
+    public User findById(String userid) throws InvocationTargetException, IllegalAccessException {
+        return userService.findById(userid);
     }
 
 }

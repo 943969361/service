@@ -31,4 +31,18 @@ public interface UserService {
      * @return
      */
     User upload(MultipartFile file, String userid);
+
+    /**
+     * 用户修改昵称
+     * @param id
+     * @param nickname
+     */
+    void updateNickname(String id, String nickname);
+
+    /**
+     * 刷新用户信息
+     * @param userid
+     * @return
+     */
+    User findById(String userid) throws InvocationTargetException, IllegalAccessException;
 }
