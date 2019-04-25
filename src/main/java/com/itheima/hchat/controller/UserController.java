@@ -1,7 +1,6 @@
 package com.itheima.hchat.controller;
 
-import cn.hutool.core.img.ImgUtil;
-import cn.hutool.core.io.FileUtil;
+import com.itheima.hchat.filter.AspectDemo;
 import com.itheima.hchat.pojo.TbUser;
 import com.itheima.hchat.pojo.vo.Result;
 import com.itheima.hchat.pojo.vo.User;
@@ -9,7 +8,6 @@ import com.itheima.hchat.sercvice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -22,6 +20,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private AspectDemo aspectDemo;
 
     /**
      * 查询所有用户
@@ -101,6 +102,28 @@ public class UserController {
     @RequestMapping("/findById")
     public User findById(String userid) throws InvocationTargetException, IllegalAccessException {
         return userService.findById(userid);
+    }
+
+    /**
+     * 查找用户信息
+     * @param userid
+     * @param friendUsername
+     * @return
+     * @throws InvocationTargetException
+     * @throws IllegalAccessException
+     */
+    @RequestMapping("/findUserById")
+    public User findUserById(String userid,String friendUsername) throws InvocationTargetException, IllegalAccessException {
+        return userService.findUserById(userid,friendUsername);
+    }
+
+    /**
+     * 测试filter过滤器
+     */
+    @RequestMapping("/test")
+    public void test(){
+        aspectDemo.attack();
+        System.out.println("执行filter的test方法");
     }
 
 }

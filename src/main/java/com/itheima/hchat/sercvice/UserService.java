@@ -45,4 +45,15 @@ public interface UserService {
      * @return
      */
     User findById(String userid) throws InvocationTargetException, IllegalAccessException;
+
+    /**
+     * 搜索好友，不需要校验
+     * 1.用户不可以添加自己好友
+     * 2.用户不能重复添加
+     * 3.用户是否已经提交好友请求
+     * @param userid
+     * @param friendUsername
+     * @return
+     */
+    User findUserById(String userid, String friendUsername);
 }

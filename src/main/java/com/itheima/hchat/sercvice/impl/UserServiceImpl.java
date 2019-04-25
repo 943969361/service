@@ -1,10 +1,9 @@
 package com.itheima.hchat.sercvice.impl;
 
-import cn.hutool.core.img.ImgUtil;
-import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.util.ImageUtil;
-import com.alibaba.fastjson.JSON;
+import com.itheima.hchat.mapper.TbFriendReqMapper;
 import com.itheima.hchat.mapper.TbUserMapper;
+import com.itheima.hchat.pojo.TbFriendReq;
+import com.itheima.hchat.pojo.TbFriendReqExample;
 import com.itheima.hchat.pojo.TbUser;
 import com.itheima.hchat.pojo.TbUserExample;
 import com.itheima.hchat.pojo.vo.User;
@@ -13,7 +12,6 @@ import com.itheima.hchat.util.FastDFSClient;
 import com.itheima.hchat.util.IdWorker;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -22,10 +20,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.awt.*;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -47,6 +43,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private HttpServletRequest request;
 
+//    @Autowired
+//    private QRCodeUtils qrCodeUtils;
+
+    @Resource
+    private TbFriendReqMapper tbFriendReqMapper;
 
     @Override
     public List<TbUser> findAll() {
@@ -96,6 +97,19 @@ public class UserServiceImpl implements UserService {
         tbUser.setPicSmall("");
         tbUser.setPicNormal("");
         tbUser.setNickname(tbUser.getUsername());
+
+        // 保存二维码
+        // 获取临时目录
+        String tmpFolder = environment.getProperty("hcat.tmpdir");
+        String qrCodeFile = tmpFolder + "/" + tbUser.getUsername() + ".png";
+        //qrCodeUtils.createQRCode(qrCodeFile, "user_code:" + tbUser.getUsername());
+        try {
+            String url = fastDFSClient.uploadFile(new File(qrCodeFile));
+            tbUser.setQrcode(url);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("上传文件失败");
+        }
         tbUser.setQrcode("");
         tbUser.setCreatetime(new Date());
         tbUserMapper.insert(tbUser);
@@ -210,4 +224,48 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    @Override
+    public User findUserById(String userid, String friendUsername) {
+//      1.用户不可以添加自己好友
+        TbUserExample example = new TbUserExample();
+        TbUserExample.Criteria criteria = example.createCriteria();
+        criteria.andUsernameEqualTo(friendUsername);
+        List<TbUser> tbUsers = tbUserMapper.selectByExample(example);
+        TbUser tbUser = new TbUser();
+        tbUser = tbUsers.get(0);
+        if(StringUtils.equals(tbUser.getId(),userid)){
+            throw  new RuntimeException("不可以添加自己为好友");
+        }
+        User user = new User();
+        try {
+            BeanUtils.copyProperties(user,tbUser);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+    /**
+     * 检查是否可以添加用户
+     * @param userid
+     * @param tbUser
+     */
+    private void checkAllowToFriend(String userid, TbUser tbUser){
+//      2.用户不能重复添加
+        TbFriendReqExample tbFriendReqExample = new TbFriendReqExample();
+        TbFriendReqExample.Criteria criteria1 = tbFriendReqExample.createCriteria();
+        criteria1.andIdEqualTo(userid);
+        criteria1.andFromUseridEqualTo(tbUser.getId());
+        List<TbFriendReq> tbFriendReqs = tbFriendReqMapper.selectByExample(tbFriendReqExample);
+        if(tbFriendReqs != null && tbFriendReqs.size() != 0){
+            throw  new RuntimeException(tbUser.getUsername()+"你们已经是好友了");
+        }
+//      3.用户是否已经提交好友请求
+        criteria1.andStatusEqualTo(0);
+        List<TbFriendReq> tbFriendReqsRequest = tbFriendReqMapper.selectByExample(tbFriendReqExample);
+        if(tbFriendReqsRequest != null && tbFriendReqsRequest.size() != 0){
+            throw  new RuntimeException("请勿重复发送请求");
+        }
+
+    }
 }
