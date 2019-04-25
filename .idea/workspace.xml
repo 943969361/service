@@ -19,7 +19,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
+<<<<<<< Updated upstream
               <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
+=======
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,11 +35,16 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
+<<<<<<< Updated upstream
               <caret line="146" column="36" lean-forward="true" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+=======
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/filter/UrlFilter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,11 +117,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="665">
               <caret line="119" column="53" selection-start-line="119" selection-start-column="53" selection-end-line="119" selection-end-column="53" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/filter/MyWebMvcConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
@@ -120,6 +142,12 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.14.RELEASE/spring-boot-autoconfigure-1.5.14.RELEASE.jar!/org/springframework/boot/autoconfigure/web/EmbeddedServletContainerAutoConfiguration.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="119" column="53" selection-start-line="119" selection-start-column="53" selection-end-line="119" selection-end-column="53" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -207,9 +235,15 @@
       <select />
     </treeState>
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="268" />
     <option name="y" value="127" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="288" />
+    <option name="y" value="56" />
+>>>>>>> Stashed changes
     <option name="width" value="1784" />
     <option name="height" value="878" />
   </component>
@@ -305,24 +339,34 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< Updated upstream
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556185897994" />
     <property name="last_opened_file_path" value="F:/code/itmayi_springboot/src/main/java/com/mayiedit/itmayi_springboot/Controller/Testtomcat.java" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556186069991" />
+>>>>>>> Stashed changes
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
+<<<<<<< Updated upstream
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.itheima.hchat.sercvice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+=======
+>>>>>>> Stashed changes
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\netty_chat\service\src\main\java\com\itheima\hchat\util" />
       <recent name="F:\netty_chat\service\src\main\java\com\itheima\hchat\conf" />
       <recent name="F:\netty_chat\service\src\main\java\com\itheima\hchat\netty" />
       <recent name="F:\netty_chat\service\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.itheima.hchat.sercvice" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -480,6 +524,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="92561000" />
   </component>
   <component name="TodoView">
@@ -502,12 +547,29 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+=======
+    <option name="totallyTimeSpent" value="3128000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13752665" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.47438753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.0502451" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32916668" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.298441" />
@@ -521,6 +583,21 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32942432" />
+=======
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="PlantUML" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
@@ -534,6 +611,7 @@
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+<<<<<<< Updated upstream
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -558,6 +636,8 @@
         </entry>
       </map>
     </option>
+=======
+>>>>>>> Stashed changes
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -573,6 +653,7 @@
       </map>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增注册登陆接口调试成功" />
     <MESSAGE value="fastdfs进行修改头像操作" />
@@ -581,6 +662,8 @@
     <MESSAGE value="测试版本回退" />
     <option name="LAST_COMMIT_MESSAGE" value="测试版本回退" />
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/.m2/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/mgt/SecurityManager.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -624,6 +707,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="jar://$USER_HOME$/.m2/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/authz/UnauthorizedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -716,6 +800,11 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/subject/support/DelegatingSubject.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/service.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.18.RELEASE/spring-web-4.3.18.RELEASE.jar!/org/springframework/web/bind/annotation/RestController.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/sercvice/UserService.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="259" selection-start-line="259" selection-end-line="259" />
@@ -784,6 +873,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="52">
           <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
         </state>
@@ -795,6 +885,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+=======
+        <state relative-caret-position="378">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1252#1253#0" expanded="true" />
@@ -822,6 +916,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -848,6 +943,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/filter/MyWebMvcConfig.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/netty/NettyListener.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
@@ -867,7 +965,11 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
+<<<<<<< Updated upstream
           <caret line="146" column="36" lean-forward="true" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+=======
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -881,6 +983,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -892,6 +995,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/filter/AspectDemo.java">
+=======
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.18.RELEASE/spring-context-4.3.18.RELEASE.jar!/org/springframework/stereotype/Component.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/netty/WebSocketServer.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
@@ -954,6 +1061,18 @@
             <element signature="e#528#529#0" expanded="true" />
             <element signature="e#600#601#0" expanded="true" />
             <element signature="e#649#650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itheima/hchat/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
           </folding>
         </state>
       </provider>
