@@ -124,7 +124,6 @@ public class UserController {
     public void test(){
         aspectDemo.attack();
         System.out.println("执行filter的test方法");
-        System.out.println("这是master的");
     }
 
 }
